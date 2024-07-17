@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import axios from "axios";
 import { useContext, useState } from "react";
@@ -61,7 +62,7 @@ const Register = () => {
           Login
         </button>
         <div>
-          Already have an account <Link to="/login">Register</Link>
+          Already have an account <Link to="/login">Login</Link>
         </div>
         {error && <span>{error.message}</span>}
       </div>
