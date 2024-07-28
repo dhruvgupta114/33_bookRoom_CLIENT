@@ -2,6 +2,7 @@
 import React from 'react'
 import axios from "axios";
 import { useContext, useState } from "react";
+import CircularProgress from '@mui/material/CircularProgress';
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
@@ -64,6 +65,13 @@ const Register = () => {
         <div>
           Already have an account <Link to="/login">Login</Link>
         </div>
+        {
+          loading && (<>
+          
+          <CircularProgress />
+          <p>Wait it will take some time</p>
+          </> )
+        }
         {error && <span>{error.message}</span>}
       </div>
     </div>

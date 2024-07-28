@@ -60,7 +60,11 @@ const Login = () => {
           Don't have an account <Link to="/register">Register</Link>
         </div>
         {
-          loading && <CircularProgress />
+          loading && (<>
+          
+          <CircularProgress />
+          <p>Wait it will take some time</p>
+          </> )
         }
         {error && <span>{error.message}</span>}
       </div>
