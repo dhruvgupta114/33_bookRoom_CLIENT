@@ -1,6 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
 
 import "./Login.css"
 import axios from "axios";
+import CircularProgress from '@mui/material/CircularProgress';
 import { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
@@ -56,6 +59,9 @@ const Login = () => {
         <div>
           Don't have an account <Link to="/register">Register</Link>
         </div>
+        {
+          loading && <CircularProgress />
+        }
         {error && <span>{error.message}</span>}
       </div>
     </div>
